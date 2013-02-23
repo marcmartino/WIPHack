@@ -16,7 +16,7 @@ function decodeMessage(msg) {
 	var decodedJson = JSON.decode(msg)
 	
 }*/
-var wipScript = (function () {
+/*var wipScript = (function () {
 	var _this,
 		sock = new WebSocket("ws://127.0.0.1/websock.php"),
 		decodeMessage = function (event) {
@@ -53,4 +53,5 @@ var wipScript = (function () {
 			}
 		}
 	};
-}());
+}());*/
+
