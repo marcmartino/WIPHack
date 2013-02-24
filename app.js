@@ -1,4 +1,5 @@
 var io = require('socket.io').listen(8080);
+var dbHandle = require('./db.js');
 
 io.sockets.on('connection', function (socket) {
 
@@ -29,8 +30,9 @@ var ioActions = {
 		/*{
 			eventID: 1
 		}*/
+		//var fullConversation = ?;
 		socket.emit(encodeSocketMessage("viewAll"),
-			{socketInfo: "stuff"});
+			fullConversation);
 	},
 	"new": function (socket, msg) {
 		/*{
