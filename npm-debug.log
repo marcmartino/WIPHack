@@ -1,0 +1,445 @@
+info it worked if it ends with ok
+verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install', '-g', 'db-mysql' ]
+info using npm@1.1.4
+info using node@v0.6.19
+verbose config file /home/marklap/.npmrc
+verbose config file /usr/etc/npmrc
+verbose config file /usr/share/npm/npmrc
+silly exec /usr/bin/nodejs "/usr/share/npm/bin/npm-get-uid-gid.js" "nobody" 1000
+silly spawning [ '/usr/bin/nodejs',
+silly spawning   [ '/usr/share/npm/bin/npm-get-uid-gid.js', 'nobody', 1000 ],
+silly spawning   null ]
+silly output from getuid/gid {"uid":65534,"gid":1000}
+silly output from getuid/gid 
+verbose cache add [ 'db-mysql', null ]
+silly cache add: name, spec, args [ undefined, 'db-mysql', [ 'db-mysql', null ] ]
+verbose parsed url { pathname: 'db-mysql', path: 'db-mysql', href: 'db-mysql' }
+verbose addNamed [ 'db-mysql', '' ]
+verbose addNamed [ null, '' ]
+silly name, range, hasData [ 'db-mysql', '', false ]
+verbose raw, before any munging db-mysql
+verbose url resolving [ 'https://registry.npmjs.org/', './db-mysql' ]
+verbose url resolved https://registry.npmjs.org/db-mysql
+http GET https://registry.npmjs.org/db-mysql
+http 200 https://registry.npmjs.org/db-mysql
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.2.1 (Erlang OTP/R15B03)',
+silly get cb     etag: '"6DQAC56ESDZBCUEX3NM5M7ZKU"',
+silly get cb     date: 'Sat, 23 Feb 2013 22:33:47 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '58303' } ]
+verbose mkdir (expected) error ENOENT, stat '/home/marklap/.npm/db-mysql'
+verbose mkdir done: /home/marklap/.npm/db-mysql 755
+silly name, range, hasData 2 [ 'db-mysql', '', true ]
+silly versions [ 'db-mysql',
+silly versions   [ '0.4.0',
+silly versions     '0.4.1',
+silly versions     '0.4.2',
+silly versions     '0.4.3',
+silly versions     '0.4.4',
+silly versions     '0.4.5',
+silly versions     '0.4.6',
+silly versions     '0.4.7',
+silly versions     '0.4.8',
+silly versions     '0.4.9',
+silly versions     '0.5.0',
+silly versions     '0.5.1',
+silly versions     '0.5.2',
+silly versions     '0.5.3',
+silly versions     '0.5.4',
+silly versions     '0.5.5',
+silly versions     '0.5.6',
+silly versions     '0.5.7',
+silly versions     '0.5.8',
+silly versions     '0.5.9',
+silly versions     '0.6.0',
+silly versions     '0.6.1',
+silly versions     '0.6.2',
+silly versions     '0.6.3',
+silly versions     '0.6.4',
+silly versions     '0.6.5',
+silly versions     '0.6.6',
+silly versions     '0.6.7',
+silly versions     '0.6.8',
+silly versions     '0.6.9',
+silly versions     '0.7.0',
+silly versions     '0.7.1',
+silly versions     '0.7.2',
+silly versions     '0.7.3',
+silly versions     '0.7.4',
+silly versions     '0.7.5',
+silly versions     '0.7.6' ] ]
+verbose bin dist [ '0.6-ares1.9.1-evundefined-openssl1.0.1c-v83.8.9.20-linux-x64-3.5.0-17-generic',
+verbose bin dist   { shasum: 'ff870557afb1ee4197712211d26b6a05394a7aeb',
+verbose bin dist     tarball: 'http://registry.npmjs.org/db-mysql/-/db-mysql-0.7.6.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/db-mysql/-/db-mysql-0.7.6.tgz',
+verbose addRemoteTarball   'ff870557afb1ee4197712211d26b6a05394a7aeb' ]
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1361658827469'
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1361658827469/1361658827469-0.5091291742864996'
+verbose mkdir done: /tmp/npm-1361658827469/1361658827469-0.5091291742864996 755
+verbose fetch to /tmp/npm-1361658827469/1361658827469-0.5091291742864996/tmp.tgz
+http GET https://registry.npmjs.org/db-mysql/-/db-mysql-0.7.6.tgz
+http 200 https://registry.npmjs.org/db-mysql/-/db-mysql-0.7.6.tgz
+silly updated sha bytes 40128
+info shasum ff870557afb1ee4197712211d26b6a05394a7aeb
+info shasum /tmp/npm-1361658827469/1361658827469-0.5091291742864996/tmp.tgz
+verbose mkdir (expected) error ENOENT, stat '/tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm'
+verbose mkdir done: /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /tmp/npm-1361658827469/1361658827469-0.5091291742864996/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/.npmignore
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/mysql-test.js
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/mysql-test-no-connection.js
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/mysql-test-sync-update.js
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/db-mysql.js
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/tests.js
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/tests-settings.json
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/mysql-test-sync.js
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/CHANGELOG
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/mysql-test-long-number.js
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/t.js
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/mysql-test-manual-query.js
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/mysql-test-async.js
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/mysql-test-insert.js
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/.gitmodules
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/tests-db.js
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/README.md
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/mysql-test-placeholder.js
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/wscript
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/package.json
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/.gitignore
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/mysql-test-long.js
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/src
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/src/result.h
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/src/connection.h
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/src/result.cc
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/src/mysql.cc
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/src/connection.cc
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/src/mysql.h
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/src/query.cc
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/src/query.h
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/src/mysql_bindings.cc
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/doc
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/doc/api.html
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/doc/changelog.html
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/doc/index.html
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/lib
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/lib/node-db
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/lib/node-db/events.h
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/lib/node-db/result.h
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/lib/node-db/tests.js
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/lib/node-db/exception.h
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/lib/node-db/connection.h
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/lib/node-db/result.cc
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/lib/node-db/node_defs.h
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/lib/node-db/connection.cc
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/lib/node-db/exception.cc
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/lib/node-db/query.cc
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/lib/node-db/query.h
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/lib/node-db/README.md
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/lib/node-db/binding.h
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/lib/node-db/binding.cc
+silly asyncMap in gTP /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package/lib/node-db/events.cc
+verbose gunzed /tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package
+verbose rm'ed /tmp/npm-1361658827469/1361658827469-0.5091291742864996/package
+verbose renamed [ '/tmp/npm-1361658827469/1361658827469-0.5091291742864996/___package.npm/package',
+verbose renamed   '/tmp/npm-1361658827469/1361658827469-0.5091291742864996/package' ]
+verbose has wscript [ undefined,
+verbose has wscript   { file: '/tmp/npm-1361658827469/1361658827469-0.5091291742864996/package/package.json',
+verbose has wscript     contributors: false,
+verbose has wscript     serverjs: false,
+verbose has wscript     wscript: true } ]
+verbose caching /tmp/npm-1361658827469/1361658827469-0.5091291742864996/package/package.json
+verbose loadDefaults db-mysql@0.7.6
+verbose tarball contents [ 'tmp.tgz', 'package' ]
+verbose from cache /tmp/npm-1361658827469/1361658827469-0.5091291742864996/package/package.json
+verbose pack /tmp/npm-1361658827469/1361658827469-0.5091291742864996/package
+verbose pack /tmp/npm-1361658827469/1361658827469-0.5091291742864996/package /home/marklap/.npm/db-mysql/0.7.6/package.tgz
+silly makeList /tmp/npm-1361658827469/1361658827469-0.5091291742864996/package
+silly dir, dirLen [ '/tmp/npm-1361658827469/1361658827469-0.5091291742864996/package',
+silly dir, dirLen   64 ]
+verbose tarball /home/marklap/.npm/db-mysql/0.7.6/package.tgz
+verbose parent /tmp/npm-1361658827469/1361658827469-0.5091291742864996/package
+verbose mkdir (expected) error ENOENT, stat '/home/marklap/.npm/db-mysql/0.7.6/___package.npm'
+verbose mkdir done: /home/marklap/.npm/db-mysql/0.7.6/___package.npm 755
+verbose unpack_ uid, gid [ 1000, 1000 ]
+verbose unpackTarget /home/marklap/.npm/db-mysql/0.7.6/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/.npmignore
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/mysql-test.js
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/mysql-test-no-connection.js
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/db-mysql.js
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/mysql-test-sync-update.js
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/tests.js
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/tests-settings.json
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/mysql-test-sync.js
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/CHANGELOG
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/mysql-test-long-number.js
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/t.js
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/mysql-test-manual-query.js
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/mysql-test-async.js
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/mysql-test-insert.js
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/.gitmodules
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/tests-db.js
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/README.md
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/mysql-test-placeholder.js
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/wscript
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/package.json
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/mysql-test-long.js
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/src
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/src/result.h
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/src/connection.h
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/src/result.cc
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/src/mysql.cc
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/src/connection.cc
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/src/mysql.h
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/src/query.cc
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/src/query.h
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/src/mysql_bindings.cc
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/doc
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/doc/api.html
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/doc/changelog.html
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/doc/index.html
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/lib
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/lib/node-db
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/lib/node-db/events.h
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/lib/node-db/result.h
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/lib/node-db/tests.js
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/lib/node-db/exception.h
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/lib/node-db/connection.h
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/lib/node-db/result.cc
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/lib/node-db/node_defs.h
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/lib/node-db/connection.cc
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/lib/node-db/exception.cc
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/lib/node-db/query.cc
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/lib/node-db/query.h
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/lib/node-db/README.md
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/lib/node-db/binding.h
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/lib/node-db/binding.cc
+silly asyncMap in gTP /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package/lib/node-db/events.cc
+verbose gunzed /home/marklap/.npm/db-mysql/0.7.6/___package.npm/package
+verbose rm'ed /home/marklap/.npm/db-mysql/0.7.6/package
+verbose renamed [ '/home/marklap/.npm/db-mysql/0.7.6/___package.npm/package',
+verbose renamed   '/home/marklap/.npm/db-mysql/0.7.6/package' ]
+verbose has wscript [ undefined,
+verbose has wscript   { file: '/home/marklap/.npm/db-mysql/0.7.6/package/package.json',
+verbose has wscript     contributors: false,
+verbose has wscript     serverjs: false,
+verbose has wscript     wscript: true } ]
+verbose caching /home/marklap/.npm/db-mysql/0.7.6/package/package.json
+verbose loadDefaults db-mysql@0.7.6
+silly updated sha bytes 40960
+silly updated sha bytes 290
+info shasum 88609cdce4d89c20d63bbf55712bb6632dc64174
+info shasum /home/marklap/.npm/db-mysql/0.7.6/package.tgz
+verbose from cache /home/marklap/.npm/db-mysql/0.7.6/package/package.json
+verbose chmod /home/marklap/.npm/db-mysql/0.7.6/package.tgz 644
+verbose chown [ '/home/marklap/.npm/db-mysql/0.7.6/package.tgz', 1000, 1000 ]
+silly resolved [ { name: 'db-mysql',
+silly resolved     description: 'MySQL database bindings for Node.JS',
+silly resolved     keywords: 
+silly resolved      [ 'database',
+silly resolved        'db',
+silly resolved        'native',
+silly resolved        'binding',
+silly resolved        'library',
+silly resolved        'plugin',
+silly resolved        'client',
+silly resolved        'mysql',
+silly resolved        'libmysql' ],
+silly resolved     homepage: 'http://nodejsdb.org/db-mysql',
+silly resolved     version: '0.7.6',
+silly resolved     engines: { node: '>=0.4.1' },
+silly resolved     maintainers: [ { name: 'Mariano Iglesias', email: 'mgiglesias@gmail.com' } ],
+silly resolved     bugs: { url: 'http://github.com/mariano/node-db-mysql/issues' },
+silly resolved     licenses: [ { type: 'MIT' } ],
+silly resolved     repositories: 
+silly resolved      [ { type: 'git',
+silly resolved          url: 'https://github.com/mariano/node-db-mysql.git' } ],
+silly resolved     main: './db-mysql',
+silly resolved     scripts: 
+silly resolved      { install: 'node-waf configure build',
+silly resolved        preuninstall: 'rm -rf build/*',
+silly resolved        test: 'node-waf test',
+silly resolved        doc: 'node-waf doc' },
+silly resolved     devDependencies: { nodeunit: '*', nodelint: '*' },
+silly resolved     _id: 'db-mysql@0.7.6',
+silly resolved     dependencies: {},
+silly resolved     optionalDependencies: {},
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.4',
+silly resolved     _nodeVersion: 'v0.6.19',
+silly resolved     _defaultsLoaded: true,
+silly resolved     dist: { shasum: '88609cdce4d89c20d63bbf55712bb6632dc64174' },
+silly resolved     _from: 'db-mysql' } ]
+info into /usr/local/lib db-mysql@0.7.6
+info installOne db-mysql@0.7.6
+verbose from cache /home/marklap/.npm/db-mysql/0.7.6/package/package.json
+info unbuild /usr/local/lib/node_modules/db-mysql
+verbose mkdir (expected) error ENOENT, stat '/usr/local/lib/node_modules/___db-mysql.npm'
+verbose mkdir done: /usr/local/lib/node_modules/___db-mysql.npm 755
+verbose unpack_ uid, gid [ 65534, 1000 ]
+verbose unpackTarget /usr/local/lib/node_modules/db-mysql
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/.npmignore
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/mysql-test.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/mysql-test-no-connection.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/mysql-test-sync-update.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/db-mysql.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/tests.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/tests-settings.json
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/mysql-test-sync.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/CHANGELOG
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/mysql-test-long-number.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/t.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/mysql-test-manual-query.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/mysql-test-async.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/mysql-test-insert.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/.gitmodules
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/tests-db.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/README.md
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/mysql-test-placeholder.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/wscript
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/package.json
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/mysql-test-long.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/src
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/src/result.h
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/src/connection.h
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/src/result.cc
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/src/mysql.cc
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/src/connection.cc
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/src/mysql.h
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/src/query.h
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/src/query.cc
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/src/mysql_bindings.cc
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/doc
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/doc/api.html
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/doc/index.html
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/doc/changelog.html
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/lib
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/lib/node-db
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/lib/node-db/result.h
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/lib/node-db/tests.js
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/lib/node-db/events.h
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/lib/node-db/exception.h
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/lib/node-db/connection.h
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/lib/node-db/result.cc
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/lib/node-db/node_defs.h
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/lib/node-db/connection.cc
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/lib/node-db/exception.cc
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/lib/node-db/query.cc
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/lib/node-db/query.h
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/lib/node-db/README.md
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/lib/node-db/binding.h
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/lib/node-db/binding.cc
+silly asyncMap in gTP /usr/local/lib/node_modules/___db-mysql.npm/package/lib/node-db/events.cc
+verbose gunzed /usr/local/lib/node_modules/___db-mysql.npm/package
+verbose rm'ed /usr/local/lib/node_modules/db-mysql
+verbose renamed [ '/usr/local/lib/node_modules/___db-mysql.npm/package',
+verbose renamed   '/usr/local/lib/node_modules/db-mysql' ]
+verbose has wscript [ undefined,
+verbose has wscript   { file: '/usr/local/lib/node_modules/db-mysql/package.json',
+verbose has wscript     contributors: false,
+verbose has wscript     serverjs: false,
+verbose has wscript     wscript: true } ]
+verbose caching /usr/local/lib/node_modules/db-mysql/package.json
+verbose loadDefaults db-mysql@0.7.6
+info preinstall db-mysql@0.7.6
+verbose from cache /usr/local/lib/node_modules/db-mysql/package.json
+verbose readDependencies: using package.json deps
+verbose from cache /usr/local/lib/node_modules/db-mysql/package.json
+verbose readDependencies: using package.json deps
+silly resolved []
+verbose about to build /usr/local/lib/node_modules/db-mysql
+info build /usr/local/lib/node_modules/db-mysql
+verbose from cache /usr/local/lib/node_modules/db-mysql/package.json
+verbose linkStuff [ true,
+verbose linkStuff   '/usr/local/lib/node_modules',
+verbose linkStuff   true,
+verbose linkStuff   '/usr/local/lib/node_modules' ]
+info linkStuff db-mysql@0.7.6
+verbose linkBins db-mysql@0.7.6
+verbose linkMans db-mysql@0.7.6
+verbose rebuildBundles db-mysql@0.7.6
+info install db-mysql@0.7.6
+verbose unsafe-perm in lifecycle false
+verbose Setting uid from 0 nobody
+verbose stack at uid setting Error
+verbose stack at uid setting     at exec (/usr/share/npm/lib/utils/exec.js:36:17)
+verbose stack at uid setting     at Array.0 (/usr/share/npm/lib/utils/lifecycle.js:141:5)
+verbose stack at uid setting     at EventEmitter._tickCallback (node.js:190:39)
+verbose Setting uid from 0 65534
+verbose stack at uid setting Error
+verbose stack at uid setting     at exec (/usr/share/npm/lib/utils/exec.js:36:17)
+verbose stack at uid setting     at /usr/share/npm/lib/utils/exec.js:43:7
+verbose stack at uid setting     at uidNumber (/usr/share/npm/lib/utils/uid-number.js:30:12)
+verbose stack at uid setting     at exec (/usr/share/npm/lib/utils/exec.js:41:12)
+verbose stack at uid setting     at Array.0 (/usr/share/npm/lib/utils/lifecycle.js:141:5)
+verbose stack at uid setting     at EventEmitter._tickCallback (node.js:190:39)
+silly exec sh "-c" "node-waf configure build"
+silly spawning [ 'sh',
+silly spawning   [ '-c', 'node-waf configure build' ],
+silly spawning   '/usr/local/lib/node_modules/db-mysql' ]
+info db-mysql@0.7.6 Failed to exec install script
+ERR! error installing db-mysql@0.7.6
+info unbuild /usr/local/lib/node_modules/db-mysql
+verbose from cache /usr/local/lib/node_modules/db-mysql/package.json
+info preuninstall db-mysql@0.7.6
+WARN This failure might be due to the use of legacy binary "node" 
+WARN For further explanations, please read
+WARN /usr/share/doc/nodejs/README.Debian
+WARN 
+verbose unsafe-perm in lifecycle false
+verbose Setting uid from 0 nobody
+verbose stack at uid setting Error
+verbose stack at uid setting     at exec (/usr/share/npm/lib/utils/exec.js:36:17)
+verbose stack at uid setting     at Array.0 (/usr/share/npm/lib/utils/lifecycle.js:141:5)
+verbose stack at uid setting     at EventEmitter._tickCallback (node.js:190:39)
+verbose Setting uid from 0 65534
+verbose stack at uid setting Error
+verbose stack at uid setting     at exec (/usr/share/npm/lib/utils/exec.js:36:17)
+verbose stack at uid setting     at /usr/share/npm/lib/utils/exec.js:43:7
+verbose stack at uid setting     at uidNumber (/usr/share/npm/lib/utils/uid-number.js:30:12)
+verbose stack at uid setting     at exec (/usr/share/npm/lib/utils/exec.js:41:12)
+verbose stack at uid setting     at Array.0 (/usr/share/npm/lib/utils/lifecycle.js:141:5)
+verbose stack at uid setting     at EventEmitter._tickCallback (node.js:190:39)
+silly exec sh "-c" "rm -rf build/*"
+silly spawning [ 'sh',
+silly spawning   [ '-c', 'rm -rf build/*' ],
+silly spawning   '/usr/local/lib/node_modules/db-mysql' ]
+info uninstall db-mysql@0.7.6
+verbose unbuild db-mysql@0.7.6 [ true,
+verbose unbuild db-mysql@0.7.6   '/usr/local/lib/node_modules',
+verbose unbuild db-mysql@0.7.6   '/usr/local/lib/node_modules' ]
+info postuninstall db-mysql@0.7.6
+verbose installOne cb db-mysql@0.7.6
+ERR! db-mysql@0.7.6 install: `node-waf configure build`
+ERR! `sh "-c" "node-waf configure build"` failed with 1
+ERR! 
+ERR! Failed at the db-mysql@0.7.6 install script.
+ERR! This is most likely a problem with the db-mysql package,
+ERR! not with npm itself.
+ERR! Tell the author that this fails on your system:
+ERR!     node-waf configure build
+ERR! You can get their info via:
+ERR!     npm owner ls db-mysql
+ERR! There is likely additional logging output above.
+ERR! 
+ERR! System Linux 3.5.0-17-generic
+ERR! command "/usr/bin/nodejs" "/usr/bin/npm" "install" "-g" "db-mysql"
+ERR! cwd /var/www/wipHack
+ERR! node -v v0.6.19
+ERR! npm -v 1.1.4
+ERR! code ELIFECYCLE
+ERR! message db-mysql@0.7.6 install: `node-waf configure build`
+ERR! message `sh "-c" "node-waf configure build"` failed with 1
+ERR! errno {}
+verbose exit [ 1, true ]

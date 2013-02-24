@@ -1,18 +1,8 @@
-<script src="http://localhost:8080/socket.io/socket.io.js"></script>
-<script>
-  var socket = io.connect('http://localhost:8080/');
-  socket.on('connect', function () {
-    socket.send('hi');
-
-    socket.on('message', function (msg) {
-      console.log(msg);
-      console.log("yay i got a message back");
-    });
-  });
+<script src="http://localhost:8080/socket.io/socket.io.js">
 </script>
 <script>
 
-/*var wipScript = (function () {
+var wipScript = (function () {
 	var _this,
 		sock = io.connect('http://localhost:8080'),
 		decodeMessage = function (event) {
@@ -20,24 +10,44 @@
 		  	time = new Date(msg.date),
 		  	timeStr = time.toLocaleTimeString();
 		  
-		  _this.messageActions[event.type](msg, timeStr);
+		  _this.messageActions[msg.type](msg, timeStr);
+		  console.log(event);
+		},
+		encodeMessage = function (action, msg) {
+			return JSON.stringify(
+				{action: action, msgContents: msg});
 		};
 	return {
+		debugSocket: sock,
 		sockOnOpen: function (event) {
-		  sock.send(
-		  	"Here's some text that the server is urgently awaiting!");
+			var openMsg = encodeMessage("viewAll",
+		  	{postID: 1});
+			console.log(openMsg);
+		  sock.send(openMsg);
 		},
 		sockOnMessage: function (event) {
-		  console.log(event.data);
+		  console.log(event);
 		  decodeMessage(event);
-		  sock.send("message received");
+		  sock.send("message", "message received");
 		},
 		start: function () {
 			_this = this;
-			sock.onopen = _this.sockOnOpen;
-			sock.onmessage = _this.sockOnMessage;
+
+			sock.on('connect', function () {
+		    _this.sockOnOpen();
+
+		    sock.on('message', function (msg) {
+		      _this.sockOnMessage(msg);
+		    });
+		  });
 		},
 		messageActions: {
+			viewAll: function (data, timeStr) {
+				console.log(data);
+			},
+			start: function (data, timeStr) {
+
+			},
 			new: function (data, timeStr) {
 
 			},
@@ -49,8 +59,8 @@
 			}
 		}
 	};
-}());*/
-
+}());
+wipScript.start();
 
 
 </script>
