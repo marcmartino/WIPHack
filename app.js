@@ -1,5 +1,11 @@
 var io = require('socket.io').listen(8080);
-var dbHandle = require('./db.js');
+var mysql - require('mysql');
+var connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'root',
+  password : 'testDBQWERTY',
+  database : "venuesDB"
+});
 
 io.sockets.on('connection', function (socket) {
 
@@ -25,12 +31,26 @@ var sendAllMessages = function (sock) {
 	var allMessages
 };
 
+function getConversation(max) {
+	connection.connect();
+
+	connection.query('SELECT * FROM `` WHERE `EventID`=1;', 
+		function(err, rows, fields) {
+		  if (err) throw err;
+
+		  console.log('The solution is: ', rows[0]);
+		}
+	);
+
+	connection.end();
+}
+
 var ioActions = {
 	viewAll: function (socket, msg) {
 		/*{
 			eventID: 1
 		}*/
-		//var fullConversation = ?;
+		var fullConversation = getConversation(5);
 		socket.emit(encodeSocketMessage("viewAll"),
 			fullConversation);
 	},

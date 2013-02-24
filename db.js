@@ -1,4 +1,4 @@
-var mysql = require("db-mysql");
+/*var mysql = require("db-mysql");
 db = new mysql.Database({
     "hostname": "localhost",
     "user": "root",
@@ -9,7 +9,7 @@ db = new mysql.Database({
         return console.log("CONNECTION error: " + error);
     }
 
-	/*this.query()
+	this.query()
         .select(["user","venue", "latitude", "longitude", "event ID", "post ID", "message"])
         .from("venueTable")
         .where("venue = ?", [ in_venue ])
@@ -19,7 +19,7 @@ db = new mysql.Database({
                 return;
             }
             // Do something with rows & columns
-        });*/
+        });
 });
 exports.new = (function(db) {
     return function(user,venue,latitude,longitude,eventid,postid,message){
@@ -38,3 +38,20 @@ exports.new = (function(db) {
         });
       };
   }(db));
+*/
+var mysql      = require('mysql');
+var connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'me',
+  password : 'secret',
+});
+
+connection.connect();
+
+connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
+  if (err) throw err;
+
+  console.log('The solution is: ', rows[0].solution);
+});
+
+connection.end();
