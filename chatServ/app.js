@@ -1,10 +1,10 @@
 var io = require('socket.io').listen(8080);
-var mysql = require('mysql');
+var mysql - require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
   password : 'testDBQWERTY',
-  database : "wipHack"
+  database : "venuesDB"
 });
 
 io.sockets.on('connection', function (socket) {
@@ -32,7 +32,17 @@ var sendAllMessages = function (sock) {
 };
 
 function getConversation(max) {
-	
+	connection.connect();
+
+	connection.query('SELECT * FROM `` WHERE `EventID`=1;', 
+		function(err, rows, fields) {
+		  if (err) throw err;
+
+		  console.log('The solution is: ', rows[0]);
+		}
+	);
+
+	connection.end();
 }
 
 var ioActions = {
@@ -40,10 +50,9 @@ var ioActions = {
 		/*{
 			eventID: 1
 		}*/
-		console.log(JSON.stringify(socket));
-		/*var fullConversation = getConversation(5);
+		var fullConversation = getConversation(5);
 		socket.emit(encodeSocketMessage("viewAll"),
-			fullConversation);*/
+			fullConversation);
 	},
 	"new": function (socket, msg) {
 		/*{
