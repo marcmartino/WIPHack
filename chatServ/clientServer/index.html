@@ -1,0 +1,66 @@
+<script src="http://localhost:8080/socket.io/socket.io.js">
+</script>
+<script>
+
+var wipScript = (function () {
+	var _this,
+		sock = io.connect('http://localhost:8080'),
+		decodeMessage = function (event) {
+		  var msg = JSON.parse(event.data),
+		  	time = new Date(msg.date),
+		  	timeStr = time.toLocaleTimeString();
+		  
+		  _this.messageActions[msg.type](msg, timeStr);
+		  console.log(event);
+		},
+		encodeMessage = function (action, msg) {
+			return JSON.stringify(
+				{action: action, msgContents: msg});
+		};
+	return {
+		debugSocket: sock,
+		sockOnOpen: function (event) {
+			var openMsg = encodeMessage("viewAll",
+		  	{postID: 1});
+			console.log(openMsg);
+		  sock.send(openMsg);
+		},
+		sockOnMessage: function (event) {
+		  console.log(event);
+		  decodeMessage(event);
+		  sock.send("message", "message received");
+		},
+		start: function () {
+			_this = this;
+
+			sock.on('connect', function () {
+		    _this.sockOnOpen();
+
+		    sock.on('message', function (msg) {
+		      _this.sockOnMessage(msg);
+		    });
+		  });
+		},
+		messageActions: {
+			viewAll: function (data, timeStr) {
+				console.log(data);
+			},
+			start: function (data, timeStr) {
+
+			},
+			new: function (data, timeStr) {
+
+			},
+			update: function (data, timeStr) {
+
+			},
+			delete: function (data, timeStr) {
+
+			}
+		}
+	};
+}());
+wipScript.start();
+
+
+</script>

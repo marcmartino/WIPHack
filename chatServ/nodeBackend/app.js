@@ -40,12 +40,13 @@ var ioActions = {
   viewAll: function (socket, msg) {
     /*{ eventID: 1 }*/
     getConversation(msg.eventID, 5, (function (socket) {
-      return function (conversationData) {
-        //success callback
-        socket.emit(encodeSocketMessage("viewAll"),
-          fullConversation);
-      };
-    }(socket));
+        return function (conversationData) {
+          //success callback
+          socket.emit(encodeSocketMessage("viewAll"),
+            fullConversation);
+        };
+      }(socket))
+    );
   },
   "new": function (socket, msg) {
     /*{
@@ -54,7 +55,7 @@ var ioActions = {
       eventID: 1,
       msgContents: "poops"
     }*/
-    var successfullAdd = (function (msg) {
+    /*var successfullAdd = (function (msg) {
         return function () {
           //sucess callback
           var formattedMessage = websocketParser.encode(msg);
@@ -66,7 +67,7 @@ var ioActions = {
         };
       }(msg);
     db.addMessage(msg.eventID, msg.msgContents, msg.location, 
-      successfullAdd);
+      successfullAdd);*/
   },
   update: function (socket, msg) {
     /*{
