@@ -22,7 +22,7 @@ var wipScript = (function () {
 		sockOnOpen: function (event) {
 			var openMsg = encodeMessage("viewAll",
 		  	{postID: 1});
-			console.log(openMsg);
+			//console.log(openMsg);
 		  sock.send(openMsg);
 		},
 		sockOnMessage: function (event) {
@@ -38,6 +38,9 @@ var wipScript = (function () {
 
 		    sock.on('message', function (msg) {
 		      _this.sockOnMessage(msg);
+		    });
+		    sock.on('viewAll', function (msg) {
+		    	console.log("view all message nigguh");
 		    });
 		  });
 		},
