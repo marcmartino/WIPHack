@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script type="text/javascript" src="googleMaps.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
+    <title>Google Maps API v3 Example: Distance Matrix</title>
+    <style>
+      body {
+        margin: 20px;
+        font-family: courier, sans-serif;
+        font-size: 12px;
+      }
+      #map {
+        height: 480px;
+        width: 640px;
+        border: solid thin #333;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body onLoad="initialize()">
+    <div id="inputs">
+      <div id="locationInfo"></div>
+      <p>
+        <FORM NAME="myform" ACTION="" METHOD="GET">
+          Enter Zip Code: <BR>
+          <INPUT TYPE="text" NAME="inputbox" VALUE=""><P>
+          <button type="button" NAME="button" Value="Click" onclick="calculateDistances(this.form);">Calculate distances</button>
+        </FORM>
+    </p>
+    </div>
+    <div id="outputDiv"></div>
+    <div id="map"></div>
+  </body>
+</html>
