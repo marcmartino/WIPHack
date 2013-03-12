@@ -71,6 +71,20 @@ function getConversation(eventID, max, successCallback) {
 		}(successCallback))
 	);
 }
+function addMessage(msgData, successCallback) {
+	var queryString = "INSERT INTO chat_messages (`Event_ID`, `User_ID`, `Message`) " +
+		"VALUES ('" + msgData.eventID + "', '1', '" + msgData.message + "')";
+	connection.query(queryString,
+		(function (msgData, successCallback) {
+			return function (err, rows, fields) {
+				if (err) {
+					return err;
+				}
+				successCallback(msgData);
+			};
+		}(msgData, successCallback))
+	);
+}
 
 var ioActions = {
   viewAll: function (socket, msg) {
@@ -106,8 +120,19 @@ var ioActions = {
 	db.addMessage(msg.eventID, msg.message, msg.location, 
 	  successfullAdd);*/
 		console.log("new message received");
+		addMessage(msg,
+			(function () {
+				return function (messageData) {
+					var formattedMessage = websocketParser.encode("new", messageData);
+				  allSockets.forEach(function (key, socket) {
+						if (socket) {
+						  socket.emit(formattedMessage);
+						}
+					});
+				};
+			}())
+		);
 		
-		console.log(msg);
   },
   update: function (socket, msg) {
 	/*{
