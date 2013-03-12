@@ -19,16 +19,18 @@ var websocketParser = {
 	    {action: action, msgContents: JSON.stringify(msg)});
 	}
 };
-var allSockets = {};
+var allSockets = {},
+	numOfSockets = 0;
 io.sockets.on('connection', function (socket) {
   allSockets[socket.id] = socket;
+  numOfSockets++;
 
   socket.on('message', function (msg) {
 	//socket.emit("message", "poop");
 	var msgFromClient = websocketParser.parse(msg);
-	console.log(msgFromClient);
+	console.log(numOfSockets + " sockets on the server");
 	if (typeof ioActions[msgFromClient.action] === "function") {
-	  ioActions[msgFromClient.action](socket, msgFromClient);
+	  ioActions[msgFromClient.action](socket, msgFromClient.msgContents);
 	}
 	else {
 	  console.log("routing action: " + msgFromClient.action);
@@ -36,7 +38,8 @@ io.sockets.on('connection', function (socket) {
   });
 
   socket.on('disconnect', function () {
-	allSockets[socket.id] = undefined;
+		allSockets[socket.id] = undefined;
+		numOfSockets --;
   });
 
 });
@@ -45,7 +48,7 @@ io.sockets.on('connection', function (socket) {
 
 
 function getConversation(eventID, max, successCallback) {
-  connection.query('SELECT * FROM chat_messages',
+  /*connection.query('SELECT * FROM chat_messages',
   	(function (successCallback) {
   		return function(err, rows, fields) {
 		  if (err) throw err;
@@ -53,6 +56,19 @@ function getConversation(eventID, max, successCallback) {
 		  successCallback(rows[0]);
 		};
 	}(successCallback))
+	);*/
+	max = max || 15;
+	eventID = eventID || 1;
+	var selectQuery = 'SELECT * FROM chat_messages WHERE ' +
+  	'`Event_ID`=\'' + eventID + '\' LIMIT ' + max + '';
+  connection.query(selectQuery,
+  	(function (successCallback) {
+  		return function(err, rows, fields) {
+		  if (err) throw err;
+		  console.log(rows[0]);
+		  successCallback(rows[0]);
+		};
+		}(successCallback))
 	);
 }
 
@@ -70,10 +86,9 @@ var ioActions = {
   },
   "new": function (socket, msg) {
 	/*{
-	  timestamp: 1231241241,
 	  location: {lat: 12, lang: 13},
 	  eventID: 1,
-	  msgContents: "poops"
+	  message: "poops"
 	}*/
 	// INSERT INTO chat_messages (`Event_ID`, `User_ID`, `Message`) 
 	//	VALUES ('1', '1', 'Fuck yo couch niggg');
@@ -88,8 +103,11 @@ var ioActions = {
 		  });
 		};
 	  }(msg);
-	db.addMessage(msg.eventID, msg.msgContents, msg.location, 
+	db.addMessage(msg.eventID, msg.message, msg.location, 
 	  successfullAdd);*/
+		console.log("new message received");
+		
+		console.log(msg);
   },
   update: function (socket, msg) {
 	/*{

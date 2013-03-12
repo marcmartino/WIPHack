@@ -21,7 +21,7 @@ var wipScript = (function () {
 		debugSocket: sock,
 		sockOnOpen: function (event) {
 			var openMsg = encodeMessage("viewAll",
-		  	{postID: 1});
+		  	{eventID: 1});
 			//console.log(openMsg);
 		  sock.send(openMsg);
 		},
